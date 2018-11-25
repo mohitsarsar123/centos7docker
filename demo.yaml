@@ -1,7 +1,7 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: democicd
+  name: DemoKubeCICD
 spec:
   replicas: 1
   strategy:
@@ -12,11 +12,11 @@ spec:
   template:
     metadata:
       labels:
-        app: democicd
+        app: DemoCICD
     spec:
       containers:
       - name: httpd
-        image: agawande/httpd:10
+        image: mohitsarsar/httpd:latest
         ports:
         - containerPort: 80
         resources:
